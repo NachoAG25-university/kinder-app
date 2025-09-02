@@ -1,0 +1,57 @@
+[
+  {
+    "id": "A001",
+    "nombre": "Matías",
+    "apellido_paterno": "Pérez",
+    "apellido_materno": "González",
+    "fecha_nacimiento": "2019-03-15",
+    "curso": "Kinder A",
+    "apoderado": "Ana González",
+    "contacto": "+56 9 1234 5678",
+    "foto": "img/alumno1.jpg"
+  },
+  {
+    "id": "A002",
+    "nombre": "Sofía",
+    "apellido_paterno": "Rojas",
+    "apellido_materno": "López",
+    "fecha_nacimiento": "2019-05-20",
+    "curso": "Kinder A",
+    "apoderado": "Carlos Rojas",
+    "contacto": "+56 9 8765 4321",
+    "foto": "img/alumno2.jpg"
+  },
+  {
+    "id": "A003",
+    "nombre": "Lucas",
+    "apellido_paterno": "Díaz",
+    "apellido_materno": "Soto",
+    "fecha_nacimiento": "2018-11-02",
+    "curso": "Kinder A",
+    "apoderado": "Javiera Soto",
+    "contacto": "+56 9 5555 4444",
+    "foto": "img/alumno3.jpg"
+  },
+  {
+    "id": "A004",
+    "nombre": "Valentina",
+    "apellido_paterno": "Silva",
+    "apellido_materno": "Morales",
+    "fecha_nacimiento": "2019-01-10",
+    "curso": "Kinder A",
+    "apoderado": "Patricia Morales",
+    "contacto": "+56 9 3333 2222",
+    "foto": "img/alumno4.jpg"
+  },
+  {
+    "id": "A005",
+    "nombre": "Diego",
+    "apellido_paterno": "Morales",
+    "apellido_materno": "Vega",
+    "fecha_nacimiento": "2018-08-25",
+    "curso": "Kinder A",
+    "apoderado": "Roberto Vega",
+    "contacto": "+56 9 7777 8888",
+    "foto": "img/alumno5.jpg"
+  }
+]

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Clases Virtual Kinder</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-child me-2"></i>
+                Libro de Clases Virtual Kinder
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="nav-inicio">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-4">
+        <!-- Vista Principal de Bienvenida -->
+        <div id="vista-principal" class="vista">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="card text-center">
+                        <div class="card-body p-5">
+                            <!-- Logo del Colegio -->
+                            <div class="mb-4">
+                                <img src="img/logo-academy.png" alt="Logo del Colegio Academy" class="img-fluid logo-principal">
+                            </div>
+                            
+                            <!-- Título de Bienvenida -->
+                            <h1 class="display-4 text-primary mb-3">
+                                <i class="fas fa-child me-3"></i>
+                                Libro de Clases Virtual Kinder
+                            </h1>
+                            
+                            <p class="lead text-muted mb-5">
+                                Sistema de gestión de asistencia para jardín infantil
+                            </p>
+                            
+                            <!-- Botones de Navegación -->
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary btn-lg w-100 btn-navegacion" data-vista="asistencia">
+                                        <i class="fas fa-calendar-check me-2"></i>
+                                        Ir a Asistencia
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-info btn-lg w-100 btn-navegacion" data-vista="reporte">
+                                        <i class="fas fa-chart-bar me-2"></i>
+                                        Ver Reporte Diario
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-secondary btn-lg w-100 btn-navegacion" data-vista="reporte-mensual">
+                                        <i class="fas fa-calendar-alt me-2"></i>
+                                        Ver Reporte Mensual
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-success btn-lg w-100" onclick="mostrarInformacionSistema()">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        Información del Sistema
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Información adicional -->
+                            <div class="mt-5 pt-4 border-top">
+                                <div class="row text-center">
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                                            <h6 class="text-muted">Gestión de Alumnos</h6>
+                                            <small class="text-muted">Registro y seguimiento de asistencia</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
+                                            <h6 class="text-muted">Reportes Detallados</h6>
+                                            <small class="text-muted">Análisis diario y mensual</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <i class="fas fa-mobile-alt fa-2x text-info mb-2"></i>
+                                            <h6 class="text-muted">Acceso Móvil</h6>
+                                            <small class="text-muted">Compatible con todos los dispositivos</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vista de Asistencia -->
+        <div id="vista-asistencia" class="vista" style="display: none;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <h4 class="mb-0">
+                                <i class="fas fa-calendar-check me-2"></i>
+                                Registro de Asistencia
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="fecha-asistencia" class="form-label">
+                                        <strong>Seleccione la fecha:</strong>
+                                    </label>
+                                    <input type="date" class="form-control" id="fecha-asistencia" required>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <button type="button" class="btn btn-primary" id="btn-cargar-fecha">
+                                        <i class="fas fa-search me-1"></i>Cargar Fecha
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Contenedor para la tabla de alumnos -->
+                            <div id="lista-alumnos"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vista de Reporte -->
+        <div id="vista-reporte" class="vista" style="display: none;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            <h4 class="mb-0">
+                                <i class="fas fa-chart-bar me-2"></i>
+                                Reporte Diario
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="fecha-reporte" class="form-label">
+                                        <strong>Seleccione la fecha del reporte:</strong>
+                                    </label>
+                                    <input type="date" class="form-control" id="fecha-reporte" required>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <button type="button" class="btn btn-info" id="btn-generar-reporte">
+                                        <i class="fas fa-file-alt me-1"></i>Generar Reporte
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Contenedor para el contenido del reporte -->
+                            <div id="contenido-reporte"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vista de Detalle de Alumno -->
+        <div id="vista-detalle-alumno" class="vista" style="display: none;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-warning text-dark">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0">
+                                    <i class="fas fa-user me-2"></i>
+                                    Información del Alumno
+                                </h4>
+                                <button type="button" class="btn btn-outline-dark" id="btn-volver-listado">
+                                    <i class="fas fa-arrow-left me-1"></i>Volver al Listado
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Contenedor para la información del alumno -->
+                            <div id="info-alumno"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vista de Reporte Mensual -->
+        <div id="vista-reporte-mensual" class="vista" style="display: none;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">
+                            <h4 class="mb-0">
+                                <i class="fas fa-calendar-alt me-2"></i>
+                                Reporte Mensual de Asistencia
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="mes-reporte-mensual" class="form-label">
+                                        <strong>Seleccione el mes y año:</strong>
+                                    </label>
+                                    <input type="month" class="form-control" id="mes-reporte-mensual" required>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <button type="button" class="btn btn-secondary" id="btn-generar-reporte-mensual">
+                                        <i class="fas fa-chart-line me-1"></i>Generar Reporte Mensual
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Contenedor para la tabla del reporte mensual -->
+                            <div id="tabla-reporte-mensual"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConfirmacionLabel">
+                        <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                        Confirmar Guardado
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Está seguro de que desea guardar el registro para esta fecha? <strong>No podrá ser modificado.</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="btn-confirmar-guardar">
+                        <i class="fas fa-save me-1"></i>Guardar Registro
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de toasts -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toast-notificacion" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-info-circle text-primary me-2"></i>
+                <strong class="me-auto">Notificación</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toast-mensaje">
+                Mensaje de notificación
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script de la aplicación -->
+    <script src="js/app.js"></script>
+</body>
+</html>
