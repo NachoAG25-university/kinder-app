@@ -106,15 +106,14 @@ kinder-app/
 ├── css/
 │   └── style.css          # Estilos personalizados y responsivos
 ├── js/
-│   └── app.js             # Lógica principal de la aplicación (1000+ líneas)
+│   └── app.js             # Lógica principal de la aplicación
 ├── data/
 │   └── alumnos.json       # Datos de los alumnos en formato JSON
 ├── img/                   # Directorio para imágenes
 │   ├── logo-academy.png   # Logo del colegio (requerido)
-│   ├── alumno1.jpg        # Fotos de alumnos (opcionales)
-│   └── ...
-├── README.txt             # Este archivo de documentación
-└── INSTALACION.md         # Guía rápida de instalación
+│   └── alumno1.jpg        # Fotos de alumnos 
+│   
+└── README.txt             # Este archivo de documentación
 ```
 
 **Descripción de archivos principales:**
