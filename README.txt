@@ -111,7 +111,8 @@ kinder-app/
 │   └── alumnos.json       # Datos de los alumnos en formato JSON
 ├── img/                   # Directorio para imágenes
 │   ├── logo-academy.png   # Logo del colegio (requerido)
-│   └── alumno1.jpg        # Fotos de alumnos 
+|   ├── alumno1.jpg        # Fotos de alumnos
+│   └── ... 
 │   
 └── README.txt             # Este archivo de documentación
 ```
